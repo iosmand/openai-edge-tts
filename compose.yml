@@ -8,8 +8,6 @@ services:
         INSTALL_FFMPEG: ${INSTALL_FFMPEG_ARG:-false} # Controlled by env var or defaults to false
     ports:
       - '${PORT:-5050}:5050'
-    env_file:
-      - .env
     environment: # optionally define in -e argument when running docker command
       API_KEY: ${API_KEY:-your_api_key_here}
       PORT: ${PORT:-5050}
